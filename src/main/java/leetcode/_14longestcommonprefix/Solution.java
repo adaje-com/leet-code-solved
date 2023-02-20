@@ -1,15 +1,6 @@
 package leetcode._14longestcommonprefix;
 
 class Solution {
-    private static String longestCommonPrefix(String word1, String word2) {
-        String prefix = word1;
-        while (!word2.startsWith(prefix)) {
-            prefix = prefix.substring(0, prefix.length() - 1);
-            if (prefix.isEmpty()) return null;
-        }
-        return prefix;
-    }
-
     public String longestCommonPrefix(String[] words) {
         if (words.length == 0) {
             return "";
@@ -22,7 +13,12 @@ class Solution {
         return prefix;
     }
 
-//    public String longestCommonPrefixUsingStreams(String[] words) {
-//        return "";
-//    }
+    private String longestCommonPrefix(String word1, String word2) {
+        String prefix = word1;
+        while (!word2.startsWith(prefix)) {
+            prefix = prefix.substring(0, prefix.length() - 1);
+            if (prefix.isEmpty()) return null;
+        }
+        return prefix;
+    }
 }

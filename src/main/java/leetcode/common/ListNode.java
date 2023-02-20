@@ -1,12 +1,10 @@
 package leetcode.common;
 
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 import java.util.Arrays;
 import java.util.PrimitiveIterator;
 
-@ToString
 @EqualsAndHashCode
 public class ListNode {
 
@@ -40,5 +38,16 @@ public class ListNode {
             current = current.next;
         }
         return head;
+    }
+
+    public String toString() {
+        //TODO: this results in an infinite loop for a circular list; fix it
+        StringBuilder builder = new StringBuilder();
+        builder.append(val);
+        if (next != null) {
+            builder.append(",")
+                    .append(next);
+        }
+        return builder.toString();
     }
 }

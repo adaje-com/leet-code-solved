@@ -3,6 +3,7 @@ package leetcode._21mergesortedlists;
 import leetcode.common.ListNode;
 
 public class Solution {
+    //TODO: move to leetcode 75 and document solution and space and time complexity
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) {
             return list2;

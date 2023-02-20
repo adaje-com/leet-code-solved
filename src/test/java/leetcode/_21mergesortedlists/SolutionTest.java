@@ -12,12 +12,14 @@ class SolutionTest {
     private final Solution solution = new Solution();
 
     @Test
+    @DisplayName("Merge {} and {} = {}")
     void twoEmptyLists_AnswersEmptyList() {
         assertThat(solution.mergeTwoLists(null, null))
                 .isEqualTo(null);
     }
 
     @Test
+    @DisplayName("Merge {} with AnyList = AnyList")
     void oneEmptyList_AnswersOtherList() {
         ListNode list = ListNode.of(new int[]{3, 4, 5});
         assertThat(solution.mergeTwoLists(null, list)).isEqualTo(list);

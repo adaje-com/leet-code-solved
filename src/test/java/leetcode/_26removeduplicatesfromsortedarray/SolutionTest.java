@@ -23,7 +23,7 @@ class SolutionTest {
         );
     }
 
-    @ParameterizedTest(name = "{0} --> {1}")
+    @ParameterizedTest(name = "{0}  -->  {1}")
     @MethodSource("arrayProvider")
     void removeDuplicates(int[] nums, int[] expectedNums) {
         int k = solution.removeDuplicates(nums); // Calls your implementation
