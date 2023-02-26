@@ -14,7 +14,7 @@ class SolutionTest {
 
     private final Solution solution = new Solution();
 
-    public static Stream<Arguments> runningSumArgumentProvider() {
+    static Stream<Arguments> runningSumArgumentProvider() {
         return Stream.of(
                 Arguments.of(new int[]{}, new int[]{}),
                 Arguments.of(new int[]{1}, new int[]{1}),

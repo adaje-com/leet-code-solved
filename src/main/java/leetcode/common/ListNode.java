@@ -44,9 +44,13 @@ public class ListNode {
         //TODO: this results in an infinite loop for a circular list; fix it
         StringBuilder builder = new StringBuilder();
         builder.append(val);
-        if (next != null) {
+        int count = 1; //only print up to 20...
+        ListNode nextNode = this.next;
+        while (nextNode != null && count <= 6) {
             builder.append(",")
-                    .append(next);
+                    .append(nextNode.val);
+            nextNode = nextNode.next;
+            count++;
         }
         return builder.toString();
     }
